@@ -1,0 +1,79 @@
+{
+    "name": "@cloud-technology/input-buffer",
+    "private": false,
+    "version": "0.2.17",
+    "type": "module",
+    "main": "index.js",
+    "description": "File System Path Input Serializer + Prompt",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "directory": ".",
+        "url": "https://github.com/cloud-hybrid/input-buffer.git"
+    },
+    "license": "BSD-2-Clause",
+    "author": "Jacob B. Sanders",
+    "scripts": {
+        "compile": "tsc --watch",
+        "start": "node --es-module-specifier-resolution node .",
+        "upload": "npm publish --access public",
+        "reinstall": "npm update && npm install --global --force",
+        "prepublishOnly": "npm install --silent && tsc"
+    },
+    "config": {
+        "organization": "cloud-technology"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@jest/globals": "latest",
+        "@types/jest": "latest",
+        "@types/node": "latest",
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/experimental-utils": "latest",
+        "@typescript-eslint/parser": "latest",
+        "@typescript-eslint/scope-manager": "latest",
+        "@typescript-eslint/type-utils": "latest",
+        "@typescript-eslint/typescript-estree": "latest",
+        "eslint": "latest",
+        "jest": "latest",
+        "ts-jest": "latest",
+        "ts-node": "latest",
+        "tslib": "latest",
+        "typescript": "latest",
+        "typescript-eslint-language-service": "latest"
+    },
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint"
+        ],
+        "extends": [
+            "eslint:recommended",
+            "plugin:@typescript-eslint/eslint-recommended",
+            "plugin:@typescript-eslint/recommended"
+        ],
+        "rules": {
+            "no-case-declarations": 0,
+            "@typescript-eslint/no-explicit-any": 0,
+            "@typescript-eslint/explicit-function-return-type": 0,
+            "@typescript-eslint/no-use-before-define": 0,
+            "@typescript-eslint/no-empty-interface": 0,
+            "@typescript-eslint/explicit-module-boundary-types": 0,
+            "@typescript-eslint/no-empty-function": 0,
+            "@typescript-eslint/no-unused-vars": 0,
+            "@typescript-eslint/no-inferrable-types": 0,
+            "@typescript-eslint/ban-types": 0,
+            "@typescript-eslint/ban-ts-comment": 0,
+            "no-sequences": "error"
+        },
+        "ignorePatterns": [
+            "coverage",
+            "declarations",
+            "distribution",
+            "node_modules"
+        ]
+    },
+    "exports": {
+        ".": "./index.js"
+    }
+}
